@@ -1,0 +1,24 @@
+Procedure dot_product (v1,v2,ps)
+BEGIN if(v1.length==v2.length) THEN
+ FOR i FROM 1 TO v2.length STEP step  DO 
+     ps:=ps+v1[i]*v2[i] ;
+
+END_FOR
+END_IF
+    
+END
+
+ALGORITHM orthogonal 
+Var
+ v1:={1,2};
+ v2:={5,2};
+ ps= Integer;
+
+ BEGIN
+  dot_product  (v1,v2,ps);
+ if ps==0 THEN
+ wirite(" v1 et v2 sont orthogonaux")
+ else 
+  wirite(" v1 et v2 ne sont pas orthogonaux")
+ END_IF
+ END
